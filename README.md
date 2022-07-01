@@ -6,9 +6,11 @@ Usage:
   exiforder.py DSC_*.jpg
 ```
 
-The JPEG exif field for the time a photo was taken only has seconds granularity.
+The JPEG exif field for the time a photo was taken (`datetime_original`) only
+has seconds granularity, not e.g. milliseconds, or microseconds.
+
 If you take multiple photos in a burst, they might all end up with the same
-time taken, with the subsecond detail in some other exif field.
+`datetime_original`, with the subsecond detail in some other exif field.
 Google Photos doesn't look in this other field, so it ends up often misordering
 photos from a burst.
 
